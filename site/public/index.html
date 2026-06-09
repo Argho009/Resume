@@ -274,21 +274,21 @@ float lightning(vec2 uv, float t) {
 void main() {
     vec2 uv = v_texCoord;
     vec2 mouse = u_mouse / u_resolution;
-    
+
     // Background: Dark Void #05060a
     vec3 bgColor = vec3(0.0196, 0.0235, 0.0392);
-    
+
     // Ambient Glows
     float distToMouse = distance(uv, mouse);
     vec3 cyan = vec3(0.023, 0.714, 0.831);
     vec3 ambientCyan = cyan * (0.1 / (distToMouse + 0.5));
-    
+
     vec3 finalColor = bgColor + ambientCyan * 0.2;
-    
+
     // Multiple Lightning Bolts
     finalColor += cyan * lightning(uv + vec2(0.2, 0.0), u_time) * 0.8;
     finalColor += cyan * lightning(uv - vec2(0.3, 0.0), u_time * 1.1) * 0.6;
-    
+
     // Dense Rising Particles
     float particleNoise = hash(uv + floor(u_time * 15.0) * 0.05);
     if (particleNoise > 0.992) {
@@ -360,7 +360,7 @@ void main() {
   const container = document.getElementById('threejs-container-ANIMATION_19');
   const devicePixelRatio = window.devicePixelRatio || 1;
   (function() {
-  const container = document.getElementById('threejs-container-ANIMATION_N'); // Placeholder ID
+  if (!container) return;
   const width = container.clientWidth || window.innerWidth;
   const height = container.clientHeight || window.innerHeight;
 
@@ -423,7 +423,7 @@ void main() {
       hex.rotation.z += hex.userData.speed;
       hex.rotation.x += hex.userData.speed * 0.5;
       hex.position.y += Math.sin(time * hex.userData.floatSpeed + i) * 0.01;
-      
+
       // Subtle pulse
       const pulse = 1.0 + Math.sin(time * 2.0 + i) * 0.1;
       hex.scale.set(pulse, pulse, pulse);
@@ -465,7 +465,7 @@ void main() {
 <!-- Identity -->
 <div class="space-y-6">
 <h2 class="letter-spread font-display text-[28px] md:text-[32px] text-text-primary uppercase font-bold tracking-[0.2em] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                    ARGHOODEEP CHOWDHURY
+                    ARGHODEEP CHOWDHURY
                 </h2>
 <div class="h-8 flex justify-center">
 <p class="typewriter font-label-caps text-secondary text-sm md:text-body-md uppercase">
@@ -564,7 +564,7 @@ void main() {
         });
 
         // HUD Center Text Typewriter
-        const hudText = "ARGHOODEEP.AC AIML 2026 SSIPMT RAIPUR";
+        const hudText = "ARGHODEEP.AC AIML 2026 SSIPMT RAIPUR";
         const hudElement = document.getElementById('hud-center-text');
         let charIndex = 0;
 
@@ -587,7 +587,7 @@ void main() {
             line.style.left = '50%';
             line.style.top = '50%';
             dischargeContainer.appendChild(line);
-            
+
             setTimeout(() => {
                 line.remove();
             }, 300);

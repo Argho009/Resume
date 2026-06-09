@@ -1,141 +1,611 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>ARGH0 // CINEMATIC - Portfolio</title>
-    <!-- Tailwind CSS (for structure/utility layout from Stitch) -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&amp;family=Space+Mono:wght@400;700&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    
-    <!-- Custom Design System styles -->
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        background: "#0a0a0c",
-                        primary: "#ffdce6",
-                        secondary: "#85d3dc",
-                        tertiary: "#f4deff",
-                        "surface-glass": "rgba(15, 15, 20, 0.45)",
-                        "whisper-border": "rgba(255, 255, 255, 0.08)",
-                        "text-primary": "#f4f4f5",
-                        "text-muted": "#a1a1aa"
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    spacing: {
-                        "container-max": "1280px",
-                        "margin-desktop": "4rem",
-                        "margin-mobile": "1rem",
-                        "gutter": "2rem"
-                    }
-                }
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arghodeep Chowdhury - ELECTRIC STORM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Geist:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#313032",
+                    "on-primary-container": "#7b4259",
+                    "on-tertiary-fixed-variant": "#602e88",
+                    "tertiary-fixed": "#f2daff",
+                    "secondary-fixed-dim": "#85d3dc",
+                    "tertiary-fixed-dim": "#e0b6ff",
+                    "surface-tint": "#fcb1cb",
+                    "surface-bright": "#39393b",
+                    "secondary-fixed": "#a1eff9",
+                    "primary-fixed": "#ffd9e4",
+                    "on-primary-fixed-variant": "#6c354b",
+                    "on-primary-fixed": "#370a1f",
+                    "secondary-container": "#006971",
+                    "whisper-border": "rgba(255, 255, 255, 0.08)",
+                    "on-background": "#e5e1e4",
+                    "on-secondary-fixed": "#002023",
+                    "surface-container-highest": "#353437",
+                    "on-tertiary-container": "#6f3d97",
+                    "on-surface": "#e5e1e4",
+                    "surface-dim": "#131315",
+                    "surface-container-high": "#2a2a2c",
+                    "inverse-primary": "#874c63",
+                    "text-muted": "#a1a1aa",
+                    "outline": "#9e8c91",
+                    "surface": "#131315",
+                    "error-container": "#93000a",
+                    "surface-variant": "#353437",
+                    "text-primary": "#f4f4f5",
+                    "primary": "#ffdce6",
+                    "on-primary": "#511f34",
+                    "surface-container": "#201f21",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e10",
+                    "inverse-surface": "#e5e1e4",
+                    "primary-fixed-dim": "#fcb1cb",
+                    "primary-container": "#ffb4ce",
+                    "on-secondary": "#00363b",
+                    "on-tertiary": "#481270",
+                    "surface-glass": "rgba(15, 15, 20, 0.45)",
+                    "secondary": "#85d3dc",
+                    "tertiary-container": "#e2baff",
+                    "tertiary": "#f4deff",
+                    "outline-variant": "#514347",
+                    "on-secondary-container": "#97e5ee",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#2e004e",
+                    "background": "#05060a",
+                    "surface-container-low": "#1c1b1d",
+                    "on-secondary-fixed-variant": "#004f55",
+                    "on-surface-variant": "#d5c2c6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "1rem",
+                    "gutter": "2rem",
+                    "stack-lg": "3rem",
+                    "stack-sm": "0.5rem",
+                    "stack-md": "1.5rem",
+                    "container-max": "1280px",
+                    "margin-desktop": "4rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Geist"],
+                    "label-caps": ["Space Mono"],
+                    "body-lg": ["Geist"],
+                    "label-sm": ["Space Mono"],
+                    "headline-md": ["Outfit"],
+                    "headline-lg": ["Outfit"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "display": ["Outfit"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.625", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.625", "fontWeight": "400"}],
+                    "label-sm": ["10px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
             }
-        }
+          },
+        },
+      }
     </script>
-    <style>
-        body {
-            background: linear-gradient(rgba(10, 10, 12, 0.45), rgba(10, 10, 12, 0.45)), url('/assets/bg-garden-sfHIf6CU.jpg') no-repeat center center fixed !important;
-            background-size: cover !important;
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
 
-        .hero-glass-card {
-            background: rgba(15, 15, 20, 0.45) !important;
-            backdrop-filter: blur(24px) saturate(120%) !important;
-            -webkit-backdrop-filter: blur(24px) saturate(120%) !important;
-            border: 1px solid rgba(255, 255, 255, 0.08) !important;
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+        body {
+            background-color: #05060a;
+            overflow-x: hidden;
+        }
+
+        .orb-gradient {
+            background: radial-gradient(circle, rgba(255,180,206,0.8) 0%, rgba(133,211,220,0.4) 50%, transparent 70%);
+        }
+
+        .orb-breathing {
+            animation: orb-breath 2s infinite ease-in-out;
+        }
+
+        @keyframes orb-breath {
+            0%, 100% { transform: scale(1); opacity: 0.8; filter: blur(20px); }
+            50% { transform: scale(1.15); opacity: 1; filter: blur(35px); }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #85d3dc;
+            white-space: nowrap;
+            letter-spacing: 0.1em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #85d3dc }
+        }
+
+        .letter-spread {
+            display: inline-block;
+            animation: letter-spacing-anim 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes letter-spacing-anim {
+            from { letter-spacing: -1em; opacity: 0; filter: blur(10px); }
+            to { letter-spacing: 0.2em; opacity: 1; filter: blur(0px); }
+        }
+
+        .skill-chip {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fade-in-up 0.5s forwards;
+        }
+
+        @keyframes fade-in-up {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass-panel {
+            background: rgba(15, 15, 20, 0.45);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .pulsing-ring {
+            animation: ring-pulse 4s infinite linear;
+        }
+
+        @keyframes ring-pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        .discharge-line {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to top, transparent, #85d3dc, transparent);
+            animation: discharge 0.3s infinite ease-out;
+        }
+
+        @keyframes discharge {
+            0% { opacity: 0; height: 0; transform: rotate(var(--rot)) translateY(0); }
+            50% { opacity: 1; height: 100px; }
+            100% { opacity: 0; height: 0; transform: rotate(var(--rot)) translateY(-150px); }
+        }
+
+        .hud-blur {
+            background: rgba(15, 15, 20, 0.7);
+            backdrop-filter: blur(24px);
         }
     </style>
-  <link rel="stylesheet" crossorigin href="/assets/index-ym5eUzhP.css">
 </head>
-<body class="bg-background text-text-primary overflow-x-hidden min-h-screen">
-    <!-- Ambient Overlays -->
-    <div class="ambient-fog"></div>
-    <div class="grain-overlay"></div>
+<body class="text-text-primary font-body-md selection:bg-secondary selection:text-surface">
+<!-- Global Visual Shell -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-lg border-b border-whisper-border bg-surface-glass shadow-[0_20px_40px_rgba(255,180,206,0.1)] h-20 flex items-center">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center w-full">
+<h1 class="font-headline-md text-headline-md font-bold text-text-primary tracking-tighter">Arghodeep Chowdhury</h1>
 
-    <!-- Main Content: Home / Journey -->
-    <main class="relative min-h-screen flex items-center pt-0" id="main-content">
-        <div class="max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-            
-            <!-- Left Side: Content -->
-            <div class="md:col-span-6 z-10 space-y-8 py-8 hero-glass-card">
-                <div class="space-y-4">
-                    <span class="font-label-caps text-xs text-secondary tracking-widest block uppercase opacity-80">Developer Portfolio</span>
-                    <h1 class="font-headline-lg text-4xl md:text-6xl font-bold leading-tight text-text-primary">
-                        Crafting intelligence in the <span class="text-primary italic font-light">digital void.</span>
-                    </h1>
-                    <p class="font-body-lg text-lg text-text-muted max-w-md">
-                        Passionate learner eager to transition into AI/ML development. Seeking opportunities to apply Python and machine learning fundamentals in real-world projects.
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-2 rounded-full hover:scale-105 hover:shadow-[0_0_15px_rgba(255,180,206,0.3)] transition-all duration-300 active:translate-y-px">Inquire</button>
+</div>
+</header>
+<!-- Background Layer: WebGL Lightning Shader -->
+<div class="fixed inset-0 z-0">
+<!-- STITCH_SHADER_START:ANIMATION_20 class="absolute inset-0 w-full h-full opacity-60" -->
+<div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_20" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_20');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+varying vec2 v_texCoord;
+
+float hash(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+float noise(vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    float a = hash(i);
+    float b = hash(i + vec2(1.0, 0.0));
+    float c = hash(i + vec2(0.0, 1.0));
+    float d = hash(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a, b, u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+float lightning(vec2 uv, float t) {
+    float n = noise(uv * 3.0 + vec2(t * 0.5, t * 0.2));
+    float bolt = smoothstep(0.02, 0.0, abs(uv.x - 0.5 + (n - 0.5) * 0.4));
+    float flicker = step(0.98, hash(vec2(t * 5.0, 0.0)));
+    return bolt * flicker;
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 mouse = u_mouse / u_resolution;
+
+    // Background: Dark Void #05060a
+    vec3 bgColor = vec3(0.0196, 0.0235, 0.0392);
+
+    // Ambient Glows
+    float distToMouse = distance(uv, mouse);
+    vec3 cyan = vec3(0.023, 0.714, 0.831);
+    vec3 ambientCyan = cyan * (0.1 / (distToMouse + 0.5));
+
+    vec3 finalColor = bgColor + ambientCyan * 0.2;
+
+    // Multiple Lightning Bolts
+    finalColor += cyan * lightning(uv + vec2(0.2, 0.0), u_time) * 0.8;
+    finalColor += cyan * lightning(uv - vec2(0.3, 0.0), u_time * 1.1) * 0.6;
+
+    // Dense Rising Particles
+    float particleNoise = hash(uv + floor(u_time * 15.0) * 0.05);
+    if (particleNoise > 0.992) {
+        float pX = hash(vec2(floor(u_time * 15.0), 1.0));
+        float pY = fract(u_time * 0.4 + hash(vec2(pX, 2.0)));
+        float pDist = distance(uv, vec2(pX, pY));
+        finalColor += vec3(0.8, 1.0, 1.0) * smoothstep(0.005, 0.0, pDist);
+    }
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_20 -->
+</div>
+<!-- Middle Layer: 3D Hexagons -->
+<div class="fixed inset-0 z-10 pointer-events-none opacity-40">
+<!-- STITCH_THREEJS_START:ANIMATION_19 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_19" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_19');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  (function() {
+  if (!container) return;
+  const width = container.clientWidth || window.innerWidth;
+  const height = container.clientHeight || window.innerHeight;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  container.appendChild(renderer.domElement);
+
+  const parallaxGroup = new THREE.Group();
+  scene.add(parallaxGroup);
+
+  // 3D Hexagons
+  const hexGeometry = new THREE.RingGeometry(0.8, 1.0, 6);
+  const hexMaterial = new THREE.MeshPhongMaterial({
+    color: 0x06b6d4,
+    transparent: true,
+    opacity: 0.4,
+    side: THREE.DoubleSide
+  });
+
+  const hexagons = [];
+  for (let i = 0; i < 20; i++) {
+    const hex = new THREE.Mesh(hexGeometry, hexMaterial);
+    hex.position.set(
+      (Math.random() - 0.5) * 30,
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 15
+    );
+    hex.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+    hex.userData.speed = 0.005 + Math.random() * 0.01;
+    hex.userData.floatSpeed = 0.5 + Math.random();
+    parallaxGroup.add(hex);
+    hexagons.push(hex);
+  }
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambientLight);
+  const pointLight = new THREE.PointLight(0x06b6d4, 2, 50);
+  pointLight.position.set(5, 5, 5);
+  scene.add(pointLight);
+
+  camera.position.z = 15;
+
+  let mouseX = 0, mouseY = 0;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2) / 200;
+    mouseY = (e.clientY - window.innerHeight / 2) / 200;
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const time = Date.now() * 0.001;
+
+    parallaxGroup.position.x += (mouseX - parallaxGroup.position.x) * 0.05;
+    parallaxGroup.position.y += (-mouseY - parallaxGroup.position.y) * 0.05;
+
+    hexagons.forEach((hex, i) => {
+      hex.rotation.z += hex.userData.speed;
+      hex.rotation.x += hex.userData.speed * 0.5;
+      hex.position.y += Math.sin(time * hex.userData.floatSpeed + i) * 0.01;
+
+      // Subtle pulse
+      const pulse = 1.0 + Math.sin(time * 2.0 + i) * 0.1;
+      hex.scale.set(pulse, pulse, pulse);
+    });
+
+    renderer.render(scene, camera);
+  }
+
+  window.addEventListener('resize', () => {
+    const newWidth = container.clientWidth || window.innerWidth;
+    const newHeight = container.clientHeight || window.innerHeight;
+    camera.aspect = newWidth / newHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(newWidth, newHeight);
+  });
+
+  animate();
+})();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_19 -->
+</div>
+<!-- Hero Content -->
+<main class="relative z-20 min-h-screen flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop pt-20">
+<!-- Large Ghosted AC -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none select-none">
+<span class="font-display text-[140px] md:text-[400px] text-text-primary opacity-[0.03] font-extrabold tracking-tighter">AC</span>
+</div>
+<!-- Center Stage -->
+<div class="relative flex flex-col items-center justify-center text-center">
+<!-- Glowing Orb -->
+<div class="relative w-48 h-48 md:w-64 md:h-64 mb-12">
+<div class="absolute inset-0 orb-gradient orb-breathing rounded-full blur-[40px]"></div>
+<div class="absolute inset-0 border border-secondary opacity-20 rounded-full animate-pulse"></div>
+<!-- Discharge bursts -->
+<div class="absolute inset-0 pointer-events-none overflow-visible" id="discharge-container"></div>
+</div>
+<!-- Identity -->
+<div class="space-y-6">
+<h2 class="letter-spread font-display text-[28px] md:text-[32px] text-text-primary uppercase font-bold tracking-[0.2em] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                    ARGHODEEP CHOWDHURY
+                </h2>
+<div class="h-8 flex justify-center">
+<p class="typewriter font-label-caps text-secondary text-sm md:text-body-md uppercase">
+                        AI/ML DEVELOPER
                     </p>
-                </div>
-                <div class="flex gap-4 pt-4">
-                    <a class="btn-glass px-8 py-4 rounded-full text-text-primary" href="projects.html">
-                        <span class="relative z-10 uppercase font-bold">Explore Journey</span>
-                    </a>
-                    <a class="btn-glass btn-teal px-8 py-4 rounded-full text-text-primary" href="projects.html">
-                        View Projects
-                    </a>
-                </div>
-                <!-- Subtle stats row -->
-                <div class="flex gap-12 pt-12 border-t border-whisper-border mt-12">
-                    <div>
-                        <div class="font-headline-md text-2xl text-secondary">02+</div>
-                        <div class="font-label-sm text-[10px] text-text-muted uppercase tracking-wider">Years Coding</div>
-                    </div>
-                    <div>
-                        <div class="font-headline-md text-2xl text-primary">03</div>
-                        <div class="font-label-sm text-[10px] text-text-muted uppercase tracking-wider">Core Projects</div>
-                    </div>
-                </div>
-            </div>
+</div>
+<div class="flex flex-col md:flex-row gap-6 items-center justify-center mt-8 text-text-muted font-label-sm">
+<span class="flex items-center gap-2 bg-surface-glass px-4 py-1.5 rounded-full border border-whisper-border">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                        Raipur C.G.
+                    </span>
+<span class="flex items-center gap-2 bg-surface-glass px-4 py-1.5 rounded-full border border-whisper-border">
+<span class="material-symbols-outlined text-[14px]">mail</span>
+                        arghodeep2006@gmail.com
+                    </span>
+</div>
+<div class="flex gap-4 mt-12 justify-center">
+<button onclick="window.location.href='tree.html'" class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-lg font-label-caps text-label-caps hover:scale-105 hover:shadow-[0_0_30px_rgba(133,211,220,0.5)] transition-all duration-300 active:translate-y-px flex items-center gap-2 group">
+                        ENTER THE STORM
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">bolt</span>
+</button>
+<button onclick="window.location.href='tree.html'" class="glass-panel text-text-primary px-8 py-3 rounded-lg font-label-caps text-label-caps hover:bg-white/10 transition-all duration-300">
+                        VIEW PORTFOLIO
+                    </button>
+</div>
+</div>
+</div>
+<!-- Left Side: Profile Glass Card -->
+<aside class="hidden xl:flex absolute left-margin-desktop top-1/2 -translate-y-1/2 w-80 glass-panel p-8 rounded-2xl flex-col gap-6 transform -rotate-1 shadow-2xl">
+<div class="space-y-1">
+<p class="font-label-sm text-secondary-fixed opacity-60 uppercase tracking-widest">Profile</p>
+<h3 class="font-headline-md text-text-primary font-bold">Arghodeep</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center bg-secondary/5">
+<span class="material-symbols-outlined text-secondary text-sm">person</span>
+</div>
+<div>
+<p class="text-[10px] text-text-muted uppercase">Primary Role</p>
+<p class="text-sm font-medium">AI/ML Developer</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-whisper-border flex items-center justify-center">
+<span class="material-symbols-outlined text-text-muted text-sm">call</span>
+</div>
+<div>
+<p class="text-[10px] text-text-muted uppercase">Comms</p>
+<p class="text-sm font-medium">+91 9031269629</p>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-whisper-border space-y-4">
+<p class="text-[10px] text-text-muted uppercase tracking-widest">Stack Proficiency</p>
+<div class="flex flex-wrap gap-2" id="skill-container">
+<!-- Skills injected via JS for staggered animation -->
+</div>
+</div>
+</aside>
+<!-- Right Side: Pulsing Explorer → tree.html -->
+<a href="tree.html" class="hidden xl:flex absolute right-margin-desktop top-1/2 -translate-y-1/2 flex-col items-center gap-4">
+<div class="relative w-32 h-32 flex items-center justify-center cursor-pointer group">
+<div class="absolute inset-0 pulsing-ring border-2 border-dashed border-secondary/30 rounded-full"></div>
+<div class="absolute inset-2 border border-secondary/20 rounded-full"></div>
+<div class="relative z-10 font-label-caps text-label-caps text-secondary tracking-[0.2em] group-hover:scale-110 transition-transform">EXPLORE</div>
+</div>
+</a>
+</main>
+<!-- Bottom HUD -->
+<footer class="fixed bottom-0 w-full z-50 hud-blur h-16 border-t border-whisper-border flex items-center px-margin-mobile md:px-margin-desktop font-label-sm">
+<div class="flex justify-between items-center w-full max-w-container-max mx-auto text-text-muted">
 
-            <!-- Right Side: The Living Canvas -->
-            <div class="md:col-span-6 relative flex justify-center items-center py-8">
-                <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden" id="tree-canvas-container" style="border-radius: 24px;">
-                    <!-- Ambient Radial glow behind canvas -->
-                    <div class="absolute inset-0 flex items-center justify-center opacity-40">
-                        <div class="w-1/2 h-full bg-gradient-to-t from-secondary/10 to-transparent blur-3xl absolute bottom-0"></div>
-                    </div>
-                    <!-- Label in the canvas -->
-                    <div class="absolute bottom-8 left-8 z-20">
-                        <div class="font-label-caps text-[10px] text-secondary/60 tracking-wider">NODE_STATUS: ACTIVE</div>
-                        <div class="font-label-sm text-[10px] text-text-muted">SYSTEM // ARGH0_V2.0</div>
-                    </div>
-                </div>
-            </div>
+<!-- HUD Center -->
+<div class="hidden md:block uppercase tracking-[0.3em] font-medium text-text-primary/70">
+<span id="hud-center-text"></span>
+</div>
+<!-- HUD Right -->
+<div class="uppercase tracking-widest flex items-center gap-4">
+<span>AI/ML Focus Build 2025</span>
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+</div>
+</footer>
+<script>
+        // Skills stagger animation
+        const skills = ['Python', 'React19', 'FastAPI', 'NextJS', 'Docker', 'TensorFlow', 'GeminiAPI'];
+        const skillContainer = document.getElementById('skill-container');
 
-        </div>
-    </main>
+        skills.forEach((skill, index) => {
+            const span = document.createElement('span');
+            span.className = 'skill-chip bg-surface-container px-3 py-1 rounded text-[10px] font-label-caps border border-whisper-border text-text-muted hover:border-secondary transition-colors cursor-default';
+            span.textContent = skill;
+            span.style.animationDelay = `${0.5 + (index * 0.1)}s`;
+            skillContainer.appendChild(span);
+        });
 
-    <!-- Shared page transition script -->
-    <script>
-        // Smooth page exit transition on internal link clicks
-        document.querySelectorAll('a').forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href.endsWith('.html') && !href.startsWith('#')) {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.body.style.transition = "opacity 0.4s ease";
-                    document.body.style.opacity = "0";
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 400);
-                });
+        // HUD Center Text Typewriter
+        const hudText = "ARGHODEEP.AC AIML 2026 SSIPMT RAIPUR";
+        const hudElement = document.getElementById('hud-center-text');
+        let charIndex = 0;
+
+        function typeHUD() {
+            if (charIndex < hudText.length) {
+                hudElement.textContent += hudText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeHUD, 50);
             }
+        }
+        setTimeout(typeHUD, 1000);
+
+        // Discharge Burst Effect
+        const dischargeContainer = document.getElementById('discharge-container');
+        function createDischarge() {
+            const line = document.createElement('div');
+            line.className = 'discharge-line';
+            const rotation = Math.random() * 360;
+            line.style.setProperty('--rot', `${rotation}deg`);
+            line.style.left = '50%';
+            line.style.top = '50%';
+            dischargeContainer.appendChild(line);
+
+            setTimeout(() => {
+                line.remove();
+            }, 300);
+        }
+
+        setInterval(() => {
+            if (Math.random() > 0.6) createDischarge();
+        }, 150);
+
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                btn.style.setProperty('--mouse-x', `${x}px`);
+                btn.style.setProperty('--mouse-y', `${y}px`);
+            });
         });
     </script>
-    <!-- Living tree code -->
-    <script src="tree.js" defer></script>
-</body>
-</html>
+</body></html>

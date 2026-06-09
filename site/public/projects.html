@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects // ARGH0 CINEMATIC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#6f3d97",
+                    "on-primary-fixed-variant": "#6c354b",
+                    "on-surface": "#e5e1e4",
+                    "on-error": "#690005",
+                    "primary-fixed": "#ffd9e4",
+                    "primary-fixed-dim": "#fcb1cb",
+                    "inverse-on-surface": "#313032",
+                    "text-primary": "#f4f4f5",
+                    "primary": "#ffdce6",
+                    "tertiary-fixed": "#f2daff",
+                    "surface-tint": "#fcb1cb",
+                    "secondary-container": "#006971",
+                    "surface-variant": "#353437",
+                    "surface-glass": "rgba(15, 15, 20, 0.45)",
+                    "primary-container": "#ffb4ce",
+                    "on-background": "#e5e1e4",
+                    "inverse-primary": "#874c63",
+                    "whisper-border": "rgba(255, 255, 255, 0.08)",
+                    "surface-dim": "#131315",
+                    "on-tertiary-fixed-variant": "#602e88",
+                    "secondary": "#85d3dc",
+                    "on-tertiary": "#481270",
+                    "surface-container-highest": "#353437",
+                    "tertiary-fixed-dim": "#e0b6ff",
+                    "surface-container-lowest": "#0e0e10",
+                    "tertiary-container": "#e2baff",
+                    "inverse-surface": "#e5e1e4",
+                    "on-tertiary-fixed": "#2e004e",
+                    "on-secondary-fixed-variant": "#004f55",
+                    "on-secondary": "#00363b",
+                    "on-primary-fixed": "#370a1f",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#85d3dc",
+                    "background": "#05060a",
+                    "tertiary": "#f4deff",
+                    "outline-variant": "#514347",
+                    "text-muted": "#a1a1aa",
+                    "on-primary": "#511f34",
+                    "surface-container-high": "#2a2a2c",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#a1eff9",
+                    "on-secondary-container": "#97e5ee",
+                    "surface-container-low": "#1c1b1d",
+                    "surface-container": "#201f21",
+                    "outline": "#9e8c91",
+                    "surface": "#131315",
+                    "on-surface-variant": "#d5c2c6",
+                    "surface-bright": "#39393b",
+                    "on-primary-container": "#7b4259",
+                    "on-secondary-fixed": "#002023",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "stack-md": "1.5rem",
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "4rem",
+                    "stack-sm": "0.5rem",
+                    "stack-lg": "3rem",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Geist"],
+                    "headline-lg": ["Outfit"],
+                    "label-caps": ["Space Mono"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Geist"],
+                    "label-sm": ["Space Mono"],
+                    "display": ["Outfit"],
+                    "headline-lg-mobile": ["Outfit"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #05060a;
+            color: #f4f4f5;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-card {
+            background: rgba(15, 15, 20, 0.45);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .glass-card:hover {
+            transform: scale(1.02) translateY(-5px);
+            border-color: rgba(255, 180, 206, 0.3);
+            box-shadow: 0 0 30px rgba(255, 180, 206, 0.15);
+        }
+
+        .glowing-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: pulse-orb 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-orb {
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.5); opacity: 0.6; }
+        }
+
+        .ghost-type {
+            opacity: 0.4;
+            letter-spacing: 0.2em;
+        }
+
+        .meta-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            padding: 2px 8px;
+            border: 1px solid rgba(133, 211, 220, 0.2);
+            color: #85d3dc;
+            background: rgba(0, 105, 113, 0.1);
+        }
+
+        .hud-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md">
+<!-- Background Layers -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<!-- STITCH_SHADER_START:ANIMATION_22 class="absolute inset-0 w-full h-full opacity-40" -->
+<div class="absolute inset-0 w-full h-full opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_22" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_22');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+varying vec2 v_texCoord;
+
+float hash(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+float noise(vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    float a = hash(i);
+    float b = hash(i + vec2(1.0, 0.0));
+    float c = hash(i + vec2(0.0, 1.0));
+    float d = hash(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a, b, u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+float lightning(vec2 uv, float t) {
+    float n = noise(uv * 3.0 + vec2(t * 0.5, t * 0.2));
+    float bolt = smoothstep(0.02, 0.0, abs(uv.x - 0.5 + (n - 0.5) * 0.4));
+    float flicker = step(0.98, hash(vec2(t * 5.0, 0.0)));
+    return bolt * flicker;
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 mouse = u_mouse / u_resolution;
+    
+    // Background: Dark Void #05060a
+    vec3 bgColor = vec3(0.0196, 0.0235, 0.0392);
+    
+    // Ambient Glows
+    float distToMouse = distance(uv, mouse);
+    vec3 cyan = vec3(0.023, 0.714, 0.831);
+    vec3 ambientCyan = cyan * (0.1 / (distToMouse + 0.5));
+    
+    vec3 finalColor = bgColor + ambientCyan * 0.2;
+    
+    // Multiple Lightning Bolts
+    finalColor += cyan * lightning(uv + vec2(0.2, 0.0), u_time) * 0.8;
+    finalColor += cyan * lightning(uv - vec2(0.3, 0.0), u_time * 1.1) * 0.6;
+    
+    // Dense Rising Particles
+    float particleNoise = hash(uv + floor(u_time * 15.0) * 0.05);
+    if (particleNoise > 0.992) {
+        float pX = hash(vec2(floor(u_time * 15.0), 1.0));
+        float pY = fract(u_time * 0.4 + hash(vec2(pX, 2.0)));
+        float pDist = distance(uv, vec2(pX, pY));
+        finalColor += vec3(0.8, 1.0, 1.0) * smoothstep(0.005, 0.0, pDist);
+    }
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_22 -->
+<!-- STITCH_THREEJS_START:ANIMATION_23 class="absolute inset-0 w-full h-full opacity-30" -->
+<div class="absolute inset-0 w-full h-full opacity-30" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_23" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_23');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  (function() {
+  const width = container.clientWidth || window.innerWidth;
+  const height = container.clientHeight || window.innerHeight;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  container.appendChild(renderer.domElement);
+
+  const parallaxGroup = new THREE.Group();
+  scene.add(parallaxGroup);
+
+  // 3D Hexagons
+  const hexGeometry = new THREE.RingGeometry(0.8, 1.0, 6);
+  const hexMaterial = new THREE.MeshPhongMaterial({
+    color: 0x06b6d4,
+    transparent: true,
+    opacity: 0.4,
+    side: THREE.DoubleSide
+  });
+
+  const hexagons = [];
+  for (let i = 0; i < 20; i++) {
+    const hex = new THREE.Mesh(hexGeometry, hexMaterial);
+    hex.position.set(
+      (Math.random() - 0.5) * 30,
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 15
+    );
+    hex.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+    hex.userData.speed = 0.005 + Math.random() * 0.01;
+    hex.userData.floatSpeed = 0.5 + Math.random();
+    parallaxGroup.add(hex);
+    hexagons.push(hex);
+  }
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambientLight);
+  const pointLight = new THREE.PointLight(0x06b6d4, 2, 50);
+  pointLight.position.set(5, 5, 5);
+  scene.add(pointLight);
+
+  camera.position.z = 15;
+
+  let mouseX = 0, mouseY = 0;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2) / 200;
+    mouseY = (e.clientY - window.innerHeight / 2) / 200;
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const time = Date.now() * 0.001;
+
+    parallaxGroup.position.x += (mouseX - parallaxGroup.position.x) * 0.05;
+    parallaxGroup.position.y += (-mouseY - parallaxGroup.position.y) * 0.05;
+
+    hexagons.forEach((hex, i) => {
+      hex.rotation.z += hex.userData.speed;
+      hex.rotation.x += hex.userData.speed * 0.5;
+      hex.position.y += Math.sin(time * hex.userData.floatSpeed + i) * 0.01;
+      
+      // Subtle pulse
+      const pulse = 1.0 + Math.sin(time * 2.0 + i) * 0.1;
+      hex.scale.set(pulse, pulse, pulse);
+    });
+
+    renderer.render(scene, camera);
+  }
+
+  window.addEventListener('resize', () => {
+    const newWidth = container.clientWidth || window.innerWidth;
+    const newHeight = container.clientHeight || window.innerHeight;
+    camera.aspect = newWidth / newHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(newWidth, newHeight);
+  });
+
+  animate();
+})();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_23 -->
+<!-- Pulsing Orbs Background -->
+<div class="glowing-orb w-96 h-96 bg-primary top-1/4 -left-20"></div>
+<div class="glowing-orb w-[500px] h-[500px] bg-secondary bottom-1/4 -right-20" style="animation-delay: -4s;"></div>
+</div>
+<!-- Header (Shared Component: TopNavBar variant) -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-lg border-b border-whisper-border">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-6">
+<a href="tree.html" class="flex items-center gap-2 text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-label-caps text-[12px] uppercase tracking-widest">Back</span>
+</a>
+<h1 class="font-headline-md text-headline-md font-bold text-text-primary tracking-tighter">
+                Arghodeep Chowdhury
+            </h1>
+</div>
+<button class="font-label-caps text-label-caps border border-whisper-border px-6 py-2 hover:bg-white/5 transition-all active:scale-95">
+                INQUIRE
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex-grow pt-32 pb-40 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="mb-12">
+<span class="font-label-caps text-label-caps ghost-type uppercase">Portfolio Archive</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-2 text-primary">Selected Projects</h2>
+</div>
+<!-- Bento-style Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1: Aegis Platform -->
+<div class="glass-card p-8 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary">shield</span>
+</div>
+<div class="mb-6">
+<span class="font-label-caps text-label-sm text-secondary uppercase tracking-widest">01 // Crisis Tech</span>
+<h3 class="font-headline-md text-headline-md text-text-primary mt-2">Aegis Platform</h3>
+</div>
+<p class="text-text-muted font-body-md mb-8 flex-grow">
+                        A high-concurrency Predictive Volunteer Coordination Platform designed for disaster response. Leveraging FastAPI &amp; Next.js to orchestrate real-time mobilization.
+                    </p>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="meta-tag">GEMINI_FLASH</span>
+<span class="meta-tag">GROQ_LLAMA</span>
+<span class="meta-tag">FASTAPI</span>
+</div>
+<div class="pt-4 border-t border-whisper-border flex justify-between items-center">
+<span class="font-label-caps text-[10px] text-text-muted">CLOUD_RUN // REDIS // DUAL_AI</span>
+<span class="material-symbols-outlined text-sm text-primary">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Project 2: College Attendance System -->
+<div class="glass-card p-8 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-secondary">fingerprint</span>
+</div>
+<div class="mb-6">
+<span class="font-label-caps text-label-sm text-secondary uppercase tracking-widest">02 // Enterprise Web</span>
+<h3 class="font-headline-md text-headline-md text-text-primary mt-2">Attendance System</h3>
+</div>
+<p class="text-text-muted font-body-md mb-8 flex-grow">
+                        A multi-role web ecosystem built on React 19. Features serverless architecture for attendance tracking with integrated OCR for automated validation.
+                    </p>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="meta-tag">REACT_19</span>
+<span class="meta-tag">TAILWIND_V4</span>
+<span class="meta-tag">OCR_ENGINE</span>
+</div>
+<div class="pt-4 border-t border-whisper-border flex justify-between items-center">
+<span class="font-label-caps text-[10px] text-text-muted">CF_WORKERS // D1 // R2_BUCKET</span>
+<span class="material-symbols-outlined text-sm text-secondary">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Data Cleaning Agent -->
+<div class="glass-card p-8 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-primary-container">dry_cleaning</span>
+</div>
+<div class="mb-6">
+<span class="font-label-caps text-label-sm text-secondary uppercase tracking-widest">03 // AI/ML Infra</span>
+<h3 class="font-headline-md text-headline-md text-text-primary mt-2">Data Cleaning Agent</h3>
+</div>
+<p class="text-text-muted font-body-md mb-8 flex-grow">
+                        OpenEnv FastAPI environment dedicated to high-performance data quality benchmarking. Automated standardization protocols for large-scale datasets.
+                    </p>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-2">
+<span class="meta-tag">OPENENV</span>
+<span class="meta-tag">DOCKER</span>
+<span class="meta-tag">BENCHMARK</span>
+</div>
+<div class="pt-4 border-t border-whisper-border flex justify-between items-center">
+<span class="font-label-caps text-[10px] text-text-muted">HF_SPACES // AUTO_STANDARDIZE</span>
+<span class="material-symbols-outlined text-sm text-primary">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- HUD (Bottom Bar) -->
+<footer class="fixed bottom-0 w-full z-50 bg-background/80 backdrop-blur-md">
+<div class="hud-line"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-16 flex items-center justify-between font-label-caps text-label-sm tracking-[0.2em] text-text-muted">
+<div class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary animate-pulse rounded-full"></span>
+<span>ARGHOODEEP.AC AIML 2026 SSIPMT RAIPUR</span>
+</div>
+<div class="hidden md:block">
+                AI/ML FOCUS BUILD 2025
+            </div>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="https://github.com/Argho009" target="_blank" rel="noopener noreferrer">GH</a>
+<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/arghodeep-chowdhury-4bb77b329" target="_blank" rel="noopener noreferrer">LI</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Layer Logic -->
+<script>
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if(x > 0 && x < rect.width && y > 0 && y < rect.height) {
+                    card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,180,206,0.05) 0%, rgba(15,15,20,0.45) 70%)`;
+                } else {
+                    card.style.background = `rgba(15, 15, 20, 0.45)`;
+                }
+            });
+        });
+
+        // Micro-interactions for metadata tags
+        const tags = document.querySelectorAll('.meta-tag');
+        tags.forEach(tag => {
+            tag.addEventListener('mouseenter', () => {
+                tag.style.borderColor = '#ffdce6';
+                tag.style.boxShadow = '0 0 10px rgba(255, 220, 230, 0.2)';
+            });
+            tag.addEventListener('mouseleave', () => {
+                tag.style.borderColor = 'rgba(133, 211, 220, 0.2)';
+                tag.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body></html>

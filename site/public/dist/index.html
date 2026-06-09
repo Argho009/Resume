@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ARGH0 // CINEMATIC - Portfolio</title>
+    <!-- Tailwind CSS (for structure/utility layout from Stitch) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&amp;family=Space+Mono:wght@400;700&amp;family=Geist:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Design System styles -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#0a0a0c",
+                        primary: "#ffdce6",
+                        secondary: "#85d3dc",
+                        tertiary: "#f4deff",
+                        "surface-glass": "rgba(15, 15, 20, 0.45)",
+                        "whisper-border": "rgba(255, 255, 255, 0.08)",
+                        "text-primary": "#f4f4f5",
+                        "text-muted": "#a1a1aa"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        "margin-desktop": "4rem",
+                        "margin-mobile": "1rem",
+                        "gutter": "2rem"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(rgba(10, 10, 12, 0.45), rgba(10, 10, 12, 0.45)), url('/assets/bg-garden-sfHIf6CU.jpg') no-repeat center center fixed !important;
+            background-size: cover !important;
+        }
+
+        .hero-glass-card {
+            background: rgba(15, 15, 20, 0.45) !important;
+            backdrop-filter: blur(24px) saturate(120%) !important;
+            -webkit-backdrop-filter: blur(24px) saturate(120%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+  <link rel="stylesheet" crossorigin href="/assets/index-ym5eUzhP.css">
+</head>
+<body class="bg-background text-text-primary overflow-x-hidden min-h-screen">
+    <!-- Ambient Overlays -->
+    <div class="ambient-fog"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- Main Content: Home / Journey -->
+    <main class="relative min-h-screen flex items-center pt-0" id="main-content">
+        <div class="max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            
+            <!-- Left Side: Content -->
+            <div class="md:col-span-6 z-10 space-y-8 py-8 hero-glass-card">
+                <div class="space-y-4">
+                    <span class="font-label-caps text-xs text-secondary tracking-widest block uppercase opacity-80">Developer Portfolio</span>
+                    <h1 class="font-headline-lg text-4xl md:text-6xl font-bold leading-tight text-text-primary">
+                        Crafting intelligence in the <span class="text-primary italic font-light">digital void.</span>
+                    </h1>
+                    <p class="font-body-lg text-lg text-text-muted max-w-md">
+                        Passionate learner eager to transition into AI/ML development. Seeking opportunities to apply Python and machine learning fundamentals in real-world projects.
+                    </p>
+                </div>
+                <div class="flex gap-4 pt-4">
+                    <a class="btn-glass px-8 py-4 rounded-full text-text-primary" href="projects.html">
+                        <span class="relative z-10 uppercase font-bold">Explore Journey</span>
+                    </a>
+                    <a class="btn-glass btn-teal px-8 py-4 rounded-full text-text-primary" href="projects.html">
+                        View Projects
+                    </a>
+                </div>
+                <!-- Subtle stats row -->
+                <div class="flex gap-12 pt-12 border-t border-whisper-border mt-12">
+                    <div>
+                        <div class="font-headline-md text-2xl text-secondary">02+</div>
+                        <div class="font-label-sm text-[10px] text-text-muted uppercase tracking-wider">Years Coding</div>
+                    </div>
+                    <div>
+                        <div class="font-headline-md text-2xl text-primary">03</div>
+                        <div class="font-label-sm text-[10px] text-text-muted uppercase tracking-wider">Core Projects</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: The Living Canvas -->
+            <div class="md:col-span-6 relative flex justify-center items-center py-8">
+                <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden" id="tree-canvas-container" style="border-radius: 24px;">
+                    <!-- Ambient Radial glow behind canvas -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-40">
+                        <div class="w-1/2 h-full bg-gradient-to-t from-secondary/10 to-transparent blur-3xl absolute bottom-0"></div>
+                    </div>
+                    <!-- Label in the canvas -->
+                    <div class="absolute bottom-8 left-8 z-20">
+                        <div class="font-label-caps text-[10px] text-secondary/60 tracking-wider">NODE_STATUS: ACTIVE</div>
+                        <div class="font-label-sm text-[10px] text-text-muted">SYSTEM // ARGH0_V2.0</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Shared page transition script -->
+    <script>
+        // Smooth page exit transition on internal link clicks
+        document.querySelectorAll('a').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.endsWith('.html') && !href.startsWith('#')) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.body.style.transition = "opacity 0.4s ease";
+                    document.body.style.opacity = "0";
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400);
+                });
+            }
+        });
+    </script>
+    <!-- Living tree code -->
+    <script src="tree.js" defer></script>
+</body>
+</html>

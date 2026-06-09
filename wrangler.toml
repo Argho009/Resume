@@ -1,5 +1,0 @@
-name = "arghodeep-resume"
-pages_build_output_dir = "dist"
-
-[env.production]
-custom_domain = "arghodeep.chowdhury.com"

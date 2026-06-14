@@ -270,7 +270,7 @@ export const projects = [
     role: 'Full-Stack Developer & AI Integration Lead',
     technologies: ['FastAPI', 'Next.js 14', 'Gemini 2.0 Flash', 'Groq Llama 3.3', 'Google Cloud Run', 'Redis'],
     collaborators: 'Solo project',
-    links: { live: '#', github: 'https://github.com/arghodeep2006' },
+    links: { live: '#', github: 'https://github.com/Argho009/Aegis' },
     status: 'Completed',
     featured: true,
   },

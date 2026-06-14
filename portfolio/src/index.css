@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-white antialiased overflow-x-hidden;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-white/20 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full;
+  }
+}
+
+@layer components {
+  /* Transparent frosted glass */
+  .glass {
+    @apply relative rounded-2xl;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px) saturate(1.6);
+    -webkit-backdrop-filter: blur(12px) saturate(1.6);
+    box-shadow:
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 1px 0 rgba(255, 255, 255, 0.05),
+      0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-strong {
+    @apply relative rounded-2xl;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(16px) saturate(1.8);
+    -webkit-backdrop-filter: blur(16px) saturate(1.8);
+    box-shadow:
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+      inset 0 -1px 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 24px rgba(0, 0, 0, 0.10);
+  }
+
+  .glass-card {
+    @apply glass;
+  }
+
+  .glass-panel {
+    @apply glass-strong p-8 md:p-10;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-medium text-sm text-white transition-all duration-200;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(12px) saturate(1.6);
+    -webkit-backdrop-filter: blur(12px) saturate(1.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+
+  .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.38);
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 rounded-xl font-medium text-sm text-white transition-all duration-200;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .btn-ghost:hover {
+    @apply text-white;
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white drop-shadow-sm;
+  }
+
+  .page-container {
+    @apply max-w-5xl mx-auto px-5 sm:px-8;
+  }
+
+  .tag {
+    @apply px-2.5 py-1 text-[11px] font-medium rounded-lg text-white/65;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+/* ─── Ken Burns – slow drift + slight zoom ─────────────────────── */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1.0) translate(0%, 0%);
+  }
+  25% {
+    transform: scale(1.06) translate(-1.5%, -1%);
+  }
+  50% {
+    transform: scale(1.08) translate(1%, -2%);
+  }
+  75% {
+    transform: scale(1.05) translate(1.5%, 0.5%);
+  }
+  100% {
+    transform: scale(1.0) translate(0%, 0%);
+  }
+}
+
+.ken-burns {
+  animation: kenBurns 40s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* ─── Atmospheric haze drift ───────────────────────────────────── */
+@keyframes hazeShift {
+  0%   { opacity: 0.4; }
+  40%  { opacity: 0.9; }
+  70%  { opacity: 0.3; }
+  100% { opacity: 0.4; }
+}
+
+.animate-haze {
+  animation: hazeShift 18s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INTRO / SPLASH SCREEN  — sakura night garden theme
+════════════════════════════════════════════════════════════════ */
+
+/* Full-screen container — NO opaque background, just a vignette */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+/* Radial vignette: centre stays clear, edges darken slightly */
+.intro-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 70% at 50% 50%,
+    transparent 40%,
+    rgba(5, 8, 20, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Central stage — absolutely centred, no background box ── */
+.intro-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+/* ── Ambient glow orb — warm pink-purple, matches water reflections ── */
+.intro-glow-orb {
+  position: absolute;
+  width: 480px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(180, 100, 140, 0.18) 0%,
+    rgba(120, 60, 120, 0.12) 40%,
+    transparent 75%
+  );
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* ── Water rings — elliptical like the background lake ── */
+.intro-rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.intro-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(180, 210, 255, 0.5);
+}
+
+/* ── Season / label ── */
+.intro-season {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255, 200, 220, 0.55);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+/* ── Name ── */
+.intro-name {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+  margin: 0 0 1.1rem 0;
+  letter-spacing: -0.01em;
+}
+.intro-name-first {
+  color: rgba(255, 248, 252, 0.96);
+  text-shadow:
+    0 0 60px rgba(255, 160, 190, 0.35),
+    0 2px 20px rgba(0, 0, 0, 0.5);
+}
+.intro-name-last {
+  /* Pull from sakura pink — like the blossoms */
+  color: rgba(255, 182, 208, 0.95);
+  text-shadow:
+    0 0 80px rgba(255, 140, 180, 0.4),
+    0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Role / job title ── */
+.intro-role {
+  font-size: 0.9rem;
+  color: rgba(220, 210, 240, 0.7);
+  letter-spacing: 0.06em;
+  margin: 0.9rem 0 0.5rem 0;
+  font-style: italic;
+}
+
+/* ── Short tagline ── */
+.intro-tagline {
+  font-size: 0.68rem;
+  color: rgba(180, 200, 230, 0.38);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0.4rem 0 2rem 0;
+}
+
+/* ── Click CTA ── */
+.intro-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.intro-cta-text {
+  font-size: 0.62rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(255, 210, 225, 0.38);
+  font-weight: 400;
+}
+
+/* ── Click burst ripple (pink-tinted) ── */
+.intro-click-ripple {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 185, 210, 0.6) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 101;
+}
+
+/* ── Corner sakura branch overlays ── */
+.intro-branch {
+  position: fixed;
+  pointer-events: none;
+}
+.intro-branch-tl { top: 0; left: 0; }
+.intro-branch-br { bottom: 0; right: 0; }
+
+/* ── Thin horizon line at bottom — evokes the waterline ── */
+.intro-horizon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 185, 210, 0.25) 20%,
+    rgba(180, 210, 255, 0.35) 50%,
+    rgba(255, 185, 210, 0.25) 80%,
+    transparent 100%
+  );
+  transform-origin: center;
+}

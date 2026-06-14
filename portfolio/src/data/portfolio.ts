@@ -1,0 +1,451 @@
+export const profile = {
+  initials: 'AC',
+  name: 'Arghodeep Chowdhury',
+  title: 'trying to be AI/ML Developer',
+  tagline: 'Building intelligent systems with Python, React & cloud-native architecture',
+  location: 'Raipur, Chhattisgarh, India',
+  phone: '(+91) 9031269629',
+  focus: 'Full-Stack Developer & AI/ML enthusiast focused on real-world intelligent systems',
+  mission:
+    'Passionate learner eager to transition into AI/ML development. I build full-stack applications that combine modern web frameworks with dual AI models, geospatial features, and cloud deployment — turning complex problems into production-ready solutions.',
+  philosophy:
+    'Every line of code is a step toward mastery. I believe in learning by building — shipping real projects, benchmarking data quality, and pushing ML fundamentals into production.',
+  availability: 'Open to Opportunities',
+  yearsExperience: 2,
+  projectsCompleted: 3,
+  status: 'CSE Student (Final Year)',
+  clients: ['SSIPMT Raipur', 'Google Cloud', 'Cloudflare', 'Hugging Face'],
+  email: 'arghodeep2006@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/arghodeep-chowdhury-4bb77b329/',
+  github: 'https://github.com/Argho009',
+  resumeUrl: '/resume.pdf',
+  lastUpdated: 'June 2026',
+  timezone: 'IST (UTC+5:30)',
+  remotePreference: 'Open to remote & hybrid',
+  lookingFor: [
+    'AI/ML Developer internships',
+    'Full-Stack engineering roles',
+    'Freelance web & API projects',
+    'Open-source collaborations',
+  ],
+}
+
+export const highlights = [
+  { label: 'Projects Shipped', value: '3+' },
+  { label: 'Tech Stack', value: '15+' },
+  { label: 'Current Status', value: 'Final Year' },
+  { label: 'ML Training Score', value: '78%' },
+]
+
+export const treeNodes = [
+  {
+    id: 'skills',
+    path: '/skills',
+    label: 'Skills',
+    icon: '⚡',
+    description: 'Gateway to technical capabilities',
+    teaser: 'Python, React, FastAPI, AI/ML & cloud-native development',
+    angle: -90,
+    color: '#ffb7c5',
+  },
+  {
+    id: 'projects',
+    path: '/projects',
+    label: 'Projects',
+    icon: '✦',
+    description: 'Showcase of selected works',
+    teaser: 'AI platforms, attendance systems & data quality agents',
+    angle: -18,
+    color: '#ffd700',
+  },
+  {
+    id: 'experience',
+    path: '/experience',
+    label: 'Journey',
+    icon: '◈',
+    description: 'Academic & project milestones',
+    teaser: 'Competitions, ML training & hands-on project development',
+    angle: 54,
+    color: '#a78bfa',
+  },
+  {
+    id: 'certificates',
+    path: '/certificates',
+    label: 'Certificates',
+    icon: '◎',
+    description: 'Credentials and achievements',
+    teaser: 'Machine learning training & competition recognition',
+    angle: 126,
+    color: '#67e8f9',
+  },
+  {
+    id: 'education',
+    path: '/education',
+    label: 'College',
+    icon: '❋',
+    description: 'Academic background',
+    teaser: 'Computer Science Engineering at SSIPMT, Raipur',
+    angle: 198,
+    color: '#86efac',
+  },
+]
+
+export const skillBranches = [
+  {
+    id: 'languages',
+    title: 'Languages & Frontend',
+    subtitle: 'Modern web interfaces and core programming languages',
+    color: '#ffb7c5',
+    skills: [
+      {
+        name: 'Python',
+        description: 'Primary language for backend APIs, ML pipelines, data processing, and FastAPI services.',
+        tools: ['FastAPI', 'TensorFlow', 'Pandas'],
+        level: 'Advanced',
+        years: '3+ years',
+        projects: ['Aegis', 'Data Cleaning Agent'],
+      },
+      {
+        name: 'JavaScript / TypeScript',
+        description: 'Full-stack web development with type-safe React applications and Node.js backends.',
+        tools: ['TypeScript', 'Node.js', 'Express.js'],
+        level: 'Advanced',
+        years: '2+ years',
+        projects: ['Attendance System', 'Aegis Frontend'],
+      },
+      {
+        name: 'React 19 & Next.js 14',
+        description: 'Building responsive, multi-role web applications with server and client components.',
+        tools: ['React 19', 'Next.js 14', 'Tailwind CSS'],
+        level: 'Advanced',
+        years: '2+ years',
+        projects: ['Aegis', 'Attendance System'],
+      },
+      {
+        name: 'C / C++',
+        description: 'Foundational programming for algorithms, data structures, and systems-level understanding.',
+        tools: ['GCC', 'Standard Library'],
+        level: 'Intermediate',
+        years: '2+ years',
+        projects: ['Academic Coursework'],
+      },
+      {
+        name: 'Tailwind CSS & Vite',
+        description: 'Rapid UI development with utility-first styling and lightning-fast build tooling.',
+        tools: ['Tailwind CSS', 'Vite', 'PostCSS'],
+        level: 'Advanced',
+        years: '2+ years',
+        projects: ['Attendance System', 'Portfolio'],
+      },
+    ],
+  },
+  {
+    id: 'backend-cloud',
+    title: 'Backend, Database & Cloud',
+    subtitle: 'Scalable APIs, data layers & cloud deployment',
+    color: '#ffd700',
+    skills: [
+      {
+        name: 'FastAPI',
+        description: 'High-performance Python APIs with automatic OpenAPI docs, async support, and ML integration.',
+        tools: ['FastAPI', 'Pydantic', 'Uvicorn'],
+        level: 'Advanced',
+        years: '1+ years',
+        projects: ['Aegis', 'Data Cleaning Agent'],
+      },
+      {
+        name: 'Hono & Cloudflare Workers',
+        description: 'Edge-computed serverless backends with global low-latency deployment.',
+        tools: ['Hono', 'Cloudflare Workers', 'Wrangler'],
+        level: 'Advanced',
+        years: '1+ years',
+        projects: ['Attendance System'],
+      },
+      {
+        name: 'Express.js',
+        description: 'RESTful Node.js APIs with middleware, JWT auth, and role-based access control.',
+        tools: ['Express.js', 'JWT', 'Middleware'],
+        level: 'Intermediate',
+        years: '1+ years',
+        projects: ['Attendance System'],
+      },
+      {
+        name: 'MongoDB & SQLite',
+        description: 'Document and relational databases for flexible and lightweight data persistence.',
+        tools: ['MongoDB', 'SQLite', 'Mongoose'],
+        level: 'Intermediate',
+        years: '2+ years',
+        projects: ['Attendance System', 'Aegis'],
+      },
+      {
+        name: 'Cloudflare D1, R2 & Supabase',
+        description: 'Edge SQL databases, object storage, and managed backend-as-a-service platforms.',
+        tools: ['Cloudflare D1', 'R2', 'Supabase'],
+        level: 'Intermediate',
+        years: '1+ years',
+        projects: ['Attendance System'],
+      },
+      {
+        name: 'Google Cloud Run & Docker',
+        description: 'Containerized deployment with auto-scaling cloud infrastructure.',
+        tools: ['Docker', 'Google Cloud Run', 'Redis'],
+        level: 'Intermediate',
+        years: '1+ years',
+        projects: ['Aegis'],
+      },
+    ],
+  },
+  {
+    id: 'ai-ml',
+    title: 'AI / ML & Data',
+    subtitle: 'Intelligent systems, LLMs & data quality',
+    color: '#a78bfa',
+    skills: [
+      {
+        name: 'Google Gemini API',
+        description: 'Multimodal AI integration for vision, text reasoning, and emotion-triggered escalation flows.',
+        tools: ['Gemini 2.0 Flash', 'Google AI SDK'],
+        level: 'Advanced',
+        years: '1+ years',
+        projects: ['Aegis'],
+      },
+      {
+        name: 'Groq Llama 3.3 70B',
+        description: 'High-speed LLM inference for text reasoning, crisis prediction, and volunteer coordination.',
+        tools: ['Groq API', 'Llama 3.3 70B'],
+        level: 'Intermediate',
+        years: '< 1 year',
+        projects: ['Aegis'],
+      },
+      {
+        name: 'TensorFlow',
+        description: 'Machine learning model development, training pipelines, and neural network fundamentals.',
+        tools: ['TensorFlow', 'Keras', 'NumPy'],
+        level: 'Intermediate',
+        years: '1+ years',
+        projects: ['ML Training Project'],
+      },
+      {
+        name: 'Data Analytics',
+        description: 'Data cleaning, outlier detection, standardization, and quality benchmarking workflows.',
+        tools: ['Pandas', 'NumPy', 'Custom Graders'],
+        level: 'Intermediate',
+        years: '1+ years',
+        projects: ['Data Cleaning Agent'],
+      },
+      {
+        name: 'OCR Integration',
+        description: 'Optical character recognition for automated document processing in attendance workflows.',
+        tools: ['OCR APIs', 'Image Processing'],
+        level: 'Intermediate',
+        years: '< 1 year',
+        projects: ['Attendance System'],
+      },
+      {
+        name: 'OpenEnv & Benchmarking',
+        description: 'Building reproducible environments for data quality evaluation with interpretable reward systems.',
+        tools: ['FastAPI', 'Docker', 'Hugging Face Spaces'],
+        level: 'Intermediate',
+        years: '< 1 year',
+        projects: ['Data Cleaning Agent'],
+      },
+    ],
+  },
+]
+
+export const softSkills = [
+  'Problem-solving', 'Self-learning', 'Project Management', 'Team Collaboration', 'Analytical Thinking', 'Adaptability',
+]
+
+export const languages = ['English (Fluent)', 'Hindi (Native)', 'Bengali (Native)']
+
+export const projects = [
+  {
+    id: 1,
+    name: 'Aegis: Predictive Volunteer Coordination Platform',
+    category: 'AI/ML',
+    timeline: '2025 – 2026',
+    description:
+      'AI-driven NGO volunteer coordination platform with a FastAPI backend and Next.js 14 frontend. Features dual AI models — Gemini 2.0 Flash for multimodal processing and Groq Llama 3.3 70B for text reasoning. Includes emotion-triggered escalation, 72-hour crisis prediction, offline SMS fallback, geospatial features, and Redis caching. Deployed on Google Cloud Run.',
+    role: 'Full-Stack Developer & AI Integration Lead',
+    technologies: ['FastAPI', 'Next.js 14', 'Gemini 2.0 Flash', 'Groq Llama 3.3', 'Google Cloud Run', 'Redis'],
+    collaborators: 'Solo project',
+    links: { live: '#', github: 'https://github.com/arghodeep2006' },
+    status: 'Completed',
+    featured: true,
+  },
+  {
+    id: 2,
+    name: 'College Attendance Management System',
+    category: 'Web Development',
+    timeline: '2024 – 2025',
+    description:
+      'Multi-role web application supporting Admin, HOD, Teacher, and Student dashboards. Complete attendance tracking with condonation workflow, OCR integration, JWT authentication, role-based access control, and analytics dashboards. Deployed on Cloudflare Workers with D1 database and R2 storage.',
+    role: 'Full-Stack Developer',
+    technologies: ['React 19', 'Tailwind CSS', 'Cloudflare Workers', 'D1', 'R2', 'JWT', 'OCR'],
+    collaborators: 'Solo project',
+    links: { live: '#', github: 'https://github.com/Argho009' },
+    status: 'Completed',
+    featured: true,
+  },
+  {
+    id: 3,
+    name: 'Data Cleaning Agent (OpenEnv)',
+    category: 'AI/ML',
+    timeline: '2025',
+    description:
+      'FastAPI environment for real-world data quality benchmarking. Procedural data scenarios with automated graders and interpretable rewards. Supports actions like fixing dates, removing duplicates, filling nulls, standardizing values, and detecting outliers. Docker containerized for Hugging Face Spaces deployment.',
+    role: 'Backend Developer & Environment Designer',
+    technologies: ['FastAPI', 'Docker', 'Python', 'Hugging Face Spaces', 'OpenEnv'],
+    collaborators: 'Solo project',
+    links: { live: '#', github: 'https://github.com/arghodeep2006' },
+    status: 'Completed',
+    featured: true,
+  },
+]
+
+export const experiences = [
+  {
+    id: 1,
+    title: 'Full-Stack Project Developer',
+    company: 'Personal Projects & Open Source',
+    duration: '2023 – Present',
+    location: 'Raipur, C.G',
+    responsibilities: [
+      'Designed and shipped 3 production-grade full-stack applications spanning AI, cloud, and data quality',
+      'Architected dual-AI model systems combining Gemini and Groq for real-time volunteer coordination',
+      'Deployed applications on Google Cloud Run and Cloudflare Workers with edge databases',
+    ],
+    achievements: [
+      'Built Aegis — AI platform with 72-hour crisis prediction and geospatial volunteer matching',
+      'Deployed Attendance System on Cloudflare edge with D1, R2, and multi-role RBAC',
+      'Published Data Cleaning Agent on Hugging Face Spaces with Docker containerization',
+    ],
+    technologies: ['Python', 'React', 'FastAPI', 'Next.js', 'Cloudflare', 'Google Cloud', 'Docker'],
+    teamSize: 1,
+    reportingTo: 'Self-directed',
+  },
+  {
+    id: 2,
+    title: 'Machine Learning Trainee',
+    company: 'Internshala Trainings',
+    duration: 'Oct 2025',
+    location: 'Online',
+    responsibilities: [
+      'Completed comprehensive Machine Learning with AI training program',
+      'Built ML models using TensorFlow with hands-on project assignments',
+      'Studied supervised learning, neural networks, and data preprocessing pipelines',
+    ],
+    achievements: [
+      'Scored 78% in final assessment (Certificate No.: 79s5vaff7m0)',
+      'Applied ML fundamentals to Aegis crisis prediction features',
+      'Strengthened foundation for AI/ML development career transition',
+    ],
+    technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy'],
+    teamSize: 1,
+    reportingTo: 'Internshala Platform',
+  },
+  {
+    id: 3,
+    title: 'Project Development Competition Finalist',
+    company: 'SSIPMT, Raipur',
+    duration: 'Aug 2023',
+    location: 'Raipur, C.G',
+    responsibilities: [
+      'Developed and presented an innovative software project for institutional competition',
+      'Collaborated on project design, implementation, and demo presentation',
+      'Competed against peer teams from the Computer Science department',
+    ],
+    achievements: [
+      'Reached finals of SSIPMT Project Development Competition',
+      'Gained early experience in end-to-end project delivery and presentation',
+      'Sparked passion for building production-ready software systems',
+    ],
+    technologies: ['Python', 'Web Development', 'Presentation'],
+    teamSize: 3,
+    reportingTo: 'Faculty Mentor',
+  },
+]
+
+export const certificates = [
+  {
+    id: 1,
+    name: 'Machine Learning with AI Training',
+    organization: 'Internshala Trainings',
+    date: 'October 2025',
+    credentialId: '79s5vaff7m0',
+    link: 'https://trainings.internshala.com/',
+    description:
+      'Comprehensive machine learning program covering supervised learning, neural networks, TensorFlow model building, data preprocessing, and evaluation metrics. Completed with a score of 78% and hands-on project work applying ML to real datasets.',
+    skills: ['Python', 'TensorFlow', 'Machine Learning', 'Data Preprocessing', 'Neural Networks'],
+    category: 'AI / Machine Learning',
+    expires: null,
+    score: '78%',
+  },
+  {
+    id: 2,
+    name: 'Project Development Competition Finalist',
+    organization: 'SSIPMT, Raipur',
+    date: 'August 2023',
+    credentialId: 'SSIPMT-PDC-2023',
+    link: '#',
+    description:
+      'Recognized as a finalist in the Shri Shankaracharya Institute of Professional Management & Technology Project Development Competition. Demonstrated ability to design, build, and present a complete software project under competitive academic conditions.',
+    skills: ['Project Development', 'Software Engineering', 'Presentation', 'Teamwork'],
+    category: 'Academic Achievement',
+    expires: null,
+    score: 'Finalist',
+  },
+]
+
+export const education = {
+  degree: 'Bachelor of Technology',
+  major: 'Computer Science Engineering',
+  university: 'Shri Shankaracharya Institute of Professional Management & Technology',
+  shortName: 'SSIPMT',
+  location: 'Raipur, Chhattisgarh',
+  graduation: '2026 (Expected)',
+  duration: '2022 – 2026',
+  gpa: null,
+  honors: ['Project Development Competition Finalist (2023)'],
+  description:
+    'Pursuing B.Tech in Computer Science Engineering with focus on full-stack development, cloud computing, and artificial intelligence. Building production projects alongside coursework — deploying real applications on Google Cloud and Cloudflare while studying core CS fundamentals including data structures, algorithms, databases, and software engineering.',
+  coursework: [
+    { name: 'Data Structures & Algorithms', desc: 'Core CS problem-solving and computational complexity' },
+    { name: 'Database Management Systems', desc: 'Relational modeling, SQL, and NoSQL architectures' },
+    { name: 'Operating Systems', desc: 'Process management, memory, and system calls' },
+    { name: 'Computer Networks', desc: 'TCP/IP, HTTP protocols, and network security' },
+    { name: 'Software Engineering', desc: 'SDLC, agile methodologies, and system design' },
+    { name: 'Machine Learning', desc: 'Supervised learning, neural networks, and model evaluation' },
+    { name: 'Web Technologies', desc: 'Modern frontend frameworks, APIs, and deployment' },
+    { name: 'Object-Oriented Programming', desc: 'Design patterns, C++, and Java fundamentals' },
+  ],
+  achievements: [
+    'Project Development Competition Finalist — SSIPMT (Aug 2023)',
+    'Machine Learning with AI Training — Internshala (Score: 78%, Oct 2025)',
+    '3 production projects deployed on Google Cloud & Cloudflare',
+    'Active open-source contributor on GitHub',
+  ],
+  minor: null,
+  capstone: {
+    title: 'Aegis: Predictive Volunteer Coordination Platform',
+    description:
+      'Capstone-level project combining AI/ML, full-stack development, and cloud deployment. Aegis uses dual AI models (Gemini 2.0 Flash + Groq Llama 3.3 70B) for intelligent NGO volunteer coordination with emotion-triggered escalation, 72-hour crisis prediction, geospatial matching, and offline SMS fallback. Demonstrates end-to-end engineering from API design to production deployment on Google Cloud Run.',
+    technologies: ['FastAPI', 'Next.js 14', 'Gemini API', 'Groq API', 'Google Cloud Run', 'Redis'],
+    date: '2025 – 2026',
+    link: 'https://github.com/arghodeep2006',
+  },
+  leadership: [],
+  clubs: [],
+}
+
+export const testimonials = [
+  {
+    quote: 'Arghodeep consistently ships impressive full-stack projects that go well beyond typical student work — real AI integration and cloud deployment.',
+    author: 'Faculty Mentor',
+    title: 'SSIPMT, Raipur',
+    date: '2025',
+  },
+]
+
+export const projectCategories = ['All Projects', 'Web Development', 'AI/ML']

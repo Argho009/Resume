@@ -1,6 +1,0 @@
-{
-  "name": "AC Cinematic Resume",
-  "description": "An immersive 3D cyberpunk HUD-style digital portfolio and resume showcasing experimental creative sequences and visual telemetry.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

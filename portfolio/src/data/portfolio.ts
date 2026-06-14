@@ -326,7 +326,7 @@ export const projects = [
     role: 'Full-Stack Developer',
     technologies: ['React', 'Tailwind CSS', 'Cloudflare Workers', 'D1', 'itty-router', 'Zustand'],
     collaborators: 'Solo project',
-    links: { live: '#', github: 'https://github.com/Argho009/Liminus.git' },
+    links: { live: 'https://study-squad-app.pages.dev/', github: 'https://github.com/Argho009/Liminus.git' },
     status: 'Completed',
     featured: true,
   },

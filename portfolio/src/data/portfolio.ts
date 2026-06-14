@@ -316,6 +316,20 @@ export const projects = [
     status: 'Completed',
     featured: true,
   },
+  {
+    id: 5,
+    name: 'StudyLeague (Liminus)',
+    category: 'Web Development',
+    timeline: '2026',
+    description:
+      'A study and productivity platform featuring leaderboards, group chat, and real-time activity tracking. Built with a premium glassmorphism UI using React and Tailwind CSS. The backend is powered by Cloudflare Workers and D1 database using itty-router, with role-based access control for admins, leaders, and users.',
+    role: 'Full-Stack Developer',
+    technologies: ['React', 'Tailwind CSS', 'Cloudflare Workers', 'D1', 'itty-router', 'Zustand'],
+    collaborators: 'Solo project',
+    links: { live: '#', github: 'https://github.com/Argho009/Liminus.git' },
+    status: 'Completed',
+    featured: true,
+  },
 ]
 
 export const experiences = [

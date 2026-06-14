@@ -302,6 +302,20 @@ export const projects = [
     status: 'Completed',
     featured: true,
   },
+  {
+    id: 4,
+    name: 'Cinematic Interactive Portfolio',
+    category: 'Web Development',
+    timeline: '2026',
+    description:
+      'A cinematic, immersive portfolio featuring a dynamic sakura night-garden theme. Includes a custom 3D-depth particle system for falling petals, a canvas-based interactive water ripple engine, and an atmospheric entry splash screen with framer-motion animations. Deployed globally on Cloudflare Pages.',
+    role: 'Frontend Developer & UI/UX Designer',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Canvas API', 'Cloudflare Pages'],
+    collaborators: 'Solo project',
+    links: { live: 'https://arghodeep.pages.dev/', github: 'https://github.com/Argho009/Resume' },
+    status: 'Completed',
+    featured: true,
+  },
 ]
 
 export const experiences = [
